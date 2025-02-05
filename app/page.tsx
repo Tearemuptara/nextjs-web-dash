@@ -3,37 +3,6 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-
-// export default function Page() {
-//   return (
-//     <main className="flex min-h-screen flex-col p-6">
-//       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-//         {/* <AcmeLogo /> */}
-//       </div>
-//       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-//         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-//           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-//             <strong>Welcome to Acme.</strong> This is the example for the{' '}
-//             <a href="https://nextjs.org/learn/" className="text-blue-500">
-//               Next.js Learn Course
-//             </a>
-//             , brought to you by Vercel.
-//           </p>
-//           <Link
-//             href="/login"
-//             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-//           >
-//             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-//           </Link>
-//         </div>
-//         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-//           {/* Add Hero Images Here */}
-//         </div>
-//       </div>
-//     </main>
-//   );
-// }
-
 import { useState } from 'react'
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 
@@ -43,20 +12,42 @@ interface Project {
   technologies: string[]
   link?: string
   github?: string
+  pdf?: string
 }
 
 const projects: Project[] = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Built a full-stack e-commerce platform with user authentication, product management, and payment integration.',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'Stripe'],
-    github: 'https://github.com/yourusername/ecommerce'
+    title: 'Langchain & Streamlit Chatbot',
+    description: 'Built a chatbot with Ollama, Langchain and Streamlit',
+    technologies: ['Python', 'Web Apps', 'LangChain', 'Streamlit', 'LLMs'],
+    github: 'https://github.com/Tearemuptara/llama2'
   },
   {
-    title: 'Data Analytics Dashboard',
-    description: 'Developed a real-time analytics dashboard for visualizing business metrics and KPIs.',
-    technologies: ['React', 'D3.js', 'Node.js', 'MongoDB'],
-    link: 'https://dashboard-demo.com'
+    title: 'Weather Data API',
+    description: 'Make calls to Weather.gov API to retrieve required data based on geolocation.',
+    technologies: ['Python', 'JavaScript', 'API', 'Geolocation'],
+    github: 'https://github.com/Tearemuptara/open-weather-api'
+  },
+  {
+    title: 'Thermal Analysis and Testing of Oregon’s First Satellite',
+    description: 'NASA grant awarded to analyze and test thermal limits of OreSat',
+    technologies: ['Mechanical Design', 'Mathematical Modeling', 'FEA', 'Capstone', 'Open Source'],
+    github: 'https://github.com/oresat',
+    link: 'https://spacegrant.oregonstate.edu/posters/thermal-analysis-and-testing-oregon%E2%80%99s-first-satellite'
+  },
+  {
+    title: 'Concept Development of a Magnetically Damped Check Valve',
+    description: '1st Place in Engineering Division, Propulsion & Flight Programs, 2016 Intern Research Symposium',
+    technologies: ['Creo Parametric', 'MATLab', 'Windchill', 'Data Analysis', 'Mathematical Modeling', 'Mechanical Testing'],
+    pdf: 'app\images\ER33_Prevo_Tara_Poster - Copy.pdf',
+    link: 'https://patents.google.com/patent/US11098817B1/en'
+  },
+  {
+    title: 'Liquid Fuel Rocket Engine Test Stand',
+    description: 'NASA grant to create a test stand for a LOX/ethanol rocket engine capable of reaching the Karman Line.',
+    technologies: ['Jupyter', 'Python', 'P&ID', 'Inventory', 'Aerospace Specification', 'Cryogenics', 'Budget Management'],
+    github: 'https://github.com/psas/liquid-engine-test-stand',
+    link: 'https://spacegrant.oregonstate.edu/sites/spacegrant.oregonstate.edu/files/lfets_osgc_nov_2017.pdf'
   }
 ]
 
@@ -69,25 +60,25 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Your Name
+            T. M. Prevo
           </h1>
           <p className="text-xl text-gray-600 mb-6">
-            Software Engineer
+            Aerospace Systems Engineer
           </p>
           <div className="flex justify-center space-x-4">
-            <a href="https://github.com/yourusername" 
+            <a href="https://github.com/TearEmUpTara" 
                className="text-gray-600 hover:text-gray-900"
                target="_blank"
                rel="noopener noreferrer">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/yourusername"
+            <a href="https://linkedin.com/in/tmprevo"
                className="text-gray-600 hover:text-gray-900"
                target="_blank"
                rel="noopener noreferrer">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:your.email@example.com"
+            <a href="mailto:tmprevo@gmail.com"
                className="text-gray-600 hover:text-gray-900">
               <Mail className="w-6 h-6" />
             </a>
@@ -118,9 +109,8 @@ export default function Home() {
           {activeTab === 'about' && (
             <div>
               <p className="text-gray-700 leading-relaxed">
-                I'm a software engineer with X years of experience specializing in full-stack web development.
-                I'm passionate about building scalable applications and solving complex problems through elegant solutions.
-                Currently focused on cloud-native applications and distributed systems.
+                I'm a versatile engineer with 3 years of experience in embedded software and almost 7 years of research & development at NASA. 
+                Prior to college, I had a thriving career at giants like Netflix and AT&T. I'm passionate about solving complex problems through elegant solutions.
               </p>
             </div>
           )}
@@ -128,21 +118,35 @@ export default function Home() {
           {activeTab === 'experience' && (
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Senior Software Engineer</h3>
-                <p className="text-gray-600">Company Name • 2020 - Present</p>
+                <h3 className="text-lg font-semibold text-gray-900">Embedded Software Engineer II</h3>
+                <p className="text-gray-600">Daimler Truck • 2021 - 2024</p>
                 <ul className="mt-2 list-disc list-inside text-gray-700">
-                  <li>Led development of microservices architecture</li>
-                  <li>Improved system performance by 40%</li>
-                  <li>Mentored junior developers</li>
+                  <li>Led development of Central Gateway ECU in custom semi-trucks</li>
+                  <li>Reduced Custom Work Orders by 80%</li>
+                  <li>Mentored junior engineers globally in enterprise and test automation methods</li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Software Engineer</h3>
-                <p className="text-gray-600">Previous Company • 2018 - 2020</p>
+                <h3 className="text-lg font-semibold text-gray-900">Engineering Intern</h3>
+                <p className="text-gray-600">NASA, Various Projects • 2015 - 2020</p>
                 <ul className="mt-2 list-disc list-inside text-gray-700">
-                  <li>Developed and maintained REST APIs</li>
-                  <li>Implemented CI/CD pipelines</li>
-                  <li>Collaborated with cross-functional teams</li>
+                  <li><b>2015-2016 UTEAP Grant:</b> Secured funding to design a rocket engine test stand</li>
+                  <li><b>2016 Internship:</b> Produced 1st Place award-winning propulsion valve prototype</li>
+                  <li><b>2017 Internship:</b> Invited back to MSFC to expand on previous research</li>
+                  <li><b>2018-2019 Lab Assistant:</b> Designed flow test experiment for the International Space Station/SpaceX-18 mission at Dryden Drop Tower</li>
+                  <li><b>2019-2020 UTEAP Grant:</b> Secured funding for 2U cubesat thermal analysis</li>
+                  <li><b>2020 IRPI Internship:</b> Designed 3D capillary fluid manifolds in Solidworks for commercial print and microgravity testing</li>
+                  <li><b>2020 MSFC Internship:</b> Modeled and demonstrated fluid mass coupling technology for clients in the offshore wind energy industry</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Technical Support Representative</h3>
+                <p className="text-gray-600">Netflix • 2011 - 2014</p>
+                <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>Ranked in the top 10 of 1,000 employees according to rigorous performance metrics</li>
+                <li>Presented a training that cut dissatisfaction rates by 40% over 1 month center-wide</li>
+                <li>Assisted with fraud prevention projects in collaboration with the USPS</li>
+                <li>Assisted approximately 120 customers per day on various networks and platforms, totaling 20,000 lifetime contacts and a 96.5% satisfaction rate</li>
                 </ul>
               </div>
             </div>
@@ -152,19 +156,19 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h3 className="font-semibold mb-2">Languages</h3>
-                <p className="text-gray-700">TypeScript, JavaScript, Python, SQL</p>
+                <p className="text-gray-700">Python, VBA, XML, TypeScript, HTML<br></br>English, Spanish, ASL</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Frontend</h3>
-                <p className="text-gray-700">React, Next.js, Tailwind CSS</p>
+                <p className="text-gray-700">React, Next.js, Tailwind CSS, Streamlit, Jupyter</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Backend</h3>
-                <p className="text-gray-700">Node.js, Express, PostgreSQL</p>
+                <p className="text-gray-700">Node.js, PostgreSQL, Neo4J, MATLab</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Tools</h3>
-                <p className="text-gray-700">Git, Docker, AWS, CI/CD</p>
+                <p className="text-gray-700">Git, Docker, GCP, AWS, CI/CD, Solidworks</p>
               </div>
             </div>
           )}
