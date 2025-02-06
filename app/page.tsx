@@ -66,7 +66,7 @@ export default function Home() {
             Aerospace Systems Engineer
           </p>
           <div className="flex justify-center items-center mb-4">
-          <Image src="/project_files/Prevo_Headshot.jpg" 
+          <Image src="/project_files/Prevo_Headshot.JPG" 
             alt="A professional in a white collared shirt with brown hair, sitting in front of NASA's flags."
             width={200} // width in pixels
             height={0} // height in pixels
