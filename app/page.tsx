@@ -4,7 +4,8 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useState } from 'react'
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, FileText} from 'lucide-react'
+import Image from 'next/image';
 
 interface Project {
   title: string
@@ -24,14 +25,14 @@ const projects: Project[] = [
   },
   {
     title: 'Weather Data API',
-    description: 'Make calls to Weather.gov API to retrieve required data based on geolocation.',
+    description: 'Make calls to Weather.gov API to retrieve required data based on geolocation. Useful for tracking ideal windsurfing conditions.',
     technologies: ['Python', 'JavaScript', 'API', 'Geolocation'],
     github: 'https://github.com/Tearemuptara/open-weather-api'
   },
   {
     title: 'Thermal Analysis and Testing of Oregon’s First Satellite',
     description: 'NASA grant awarded to analyze and test thermal limits of OreSat',
-    technologies: ['Mechanical Design', 'Mathematical Modeling', 'FEA', 'Capstone', 'Open Source'],
+    technologies: ['Design', 'Mathematical Modeling', 'FEA', 'Capstone', 'Open Source'],
     github: 'https://github.com/oresat',
     link: 'https://spacegrant.oregonstate.edu/posters/thermal-analysis-and-testing-oregon%E2%80%99s-first-satellite'
   },
@@ -39,13 +40,13 @@ const projects: Project[] = [
     title: 'Concept Development of a Magnetically Damped Check Valve',
     description: '1st Place in Engineering Division, Propulsion & Flight Programs, 2016 Intern Research Symposium',
     technologies: ['Creo Parametric', 'MATLab', 'Windchill', 'Data Analysis', 'Mathematical Modeling', 'Mechanical Testing'],
-    pdf: 'app\images\ER33_Prevo_Tara_Poster - Copy.pdf',
+    pdf: '/project_files/ER33_Prevo_Tara_Poster - Copy.pdf',
     link: 'https://patents.google.com/patent/US11098817B1/en'
   },
   {
     title: 'Liquid Fuel Rocket Engine Test Stand',
     description: 'NASA grant to create a test stand for a LOX/ethanol rocket engine capable of reaching the Karman Line.',
-    technologies: ['Jupyter', 'Python', 'P&ID', 'Inventory', 'Aerospace Specification', 'Cryogenics', 'Budget Management'],
+    technologies: ['Jupyter', 'Python', 'P&ID', 'Aerospace Specification', 'Cryogenics', 'Project Management'],
     github: 'https://github.com/psas/liquid-engine-test-stand',
     link: 'https://spacegrant.oregonstate.edu/sites/spacegrant.oregonstate.edu/files/lfets_osgc_nov_2017.pdf'
   }
@@ -55,17 +56,25 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('about')
 
   return (
-    <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
             T. M. Prevo
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-600 mb-3">
             Aerospace Systems Engineer
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center items-center mb-4">
+          <Image src="/project_files/Prevo_Headshot.jpg" 
+            alt="A professional in a white collared shirt with brown hair, sitting in front of NASA's flags."
+            width={200} // width in pixels
+            height={0} // height in pixels
+            className="shadow-lg rounded-lg"
+          />
+          </div>
+          <div className="flex justify-center space-x-4 mb-6">
             <a href="https://github.com/TearEmUpTara" 
                className="text-gray-600 hover:text-gray-900"
                target="_blank"
@@ -86,7 +95,7 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-6">
           <nav className="flex space-x-4">
             {['about', 'experience', 'skills', 'projects'].map((tab) => (
               <button
@@ -109,8 +118,8 @@ export default function Home() {
           {activeTab === 'about' && (
             <div>
               <p className="text-gray-700 leading-relaxed">
-                I'm a versatile engineer with 3 years of experience in embedded software and almost 7 years of research & development at NASA. 
-                Prior to college, I had a thriving career at giants like Netflix and AT&T. I'm passionate about solving complex problems through elegant solutions.
+                I'm a versatile engineer with 3 years of experience of embedded software development experience and almost 7 years of research & development experience at NASA. 
+                Prior to college, I had a thriving career at giants like Netflix and AT&T. I'm passionate about solving complex problems through elegant solutions and automation.
               </p>
             </div>
           )}
@@ -123,20 +132,24 @@ export default function Home() {
                 <ul className="mt-2 list-disc list-inside text-gray-700">
                   <li>Led development of Central Gateway ECU in custom semi-trucks</li>
                   <li>Reduced Custom Work Orders by 80%</li>
-                  <li>Mentored junior engineers globally in enterprise and test automation methods</li>
+                  <li>Mentored junior engineers globally</li>
                 </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">BSME Graduate, Class of 2020</h3>
+                <p className="text-gray-600">Maseeh College of Engineering and Computer Science • Cum Laude</p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Engineering Intern</h3>
                 <p className="text-gray-600">NASA, Various Projects • 2015 - 2020</p>
                 <ul className="mt-2 list-disc list-inside text-gray-700">
-                  <li><b>2015-2016 UTEAP Grant:</b> Secured funding to design a rocket engine test stand</li>
+                  <li><b>2015-2016 UTEAP Grant:</b> Secured funding to design a cryogenic rocket engine test stand</li>
                   <li><b>2016 Internship:</b> Produced 1st Place award-winning propulsion valve prototype</li>
                   <li><b>2017 Internship:</b> Invited back to MSFC to expand on previous research</li>
-                  <li><b>2018-2019 Lab Assistant:</b> Designed flow test experiment for the International Space Station/SpaceX-18 mission at Dryden Drop Tower</li>
+                  <li><b>2018-2019 Lab Assistant:</b> Designed flow test experiment for the ISS/SpaceX-18 mission at Dryden Drop Tower</li>
                   <li><b>2019-2020 UTEAP Grant:</b> Secured funding for 2U cubesat thermal analysis</li>
-                  <li><b>2020 IRPI Internship:</b> Designed 3D capillary fluid manifolds in Solidworks for commercial print and microgravity testing</li>
-                  <li><b>2020 MSFC Internship:</b> Modeled and demonstrated fluid mass coupling technology for clients in the offshore wind energy industry</li>
+                  <li><b>2020 IRPI Internship:</b> Designed capillary fluid manifolds in Solidworks for commercial print and microgravity testing</li>
+                  <li><b>2020 MSFC Internship:</b> Adopted fluid mass coupling technology to clients' needs in the offshore wind energy industry</li>
                 </ul>
               </div>
               <div>
@@ -145,8 +158,8 @@ export default function Home() {
                 <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>Ranked in the top 10 of 1,000 employees according to rigorous performance metrics</li>
                 <li>Presented a training that cut dissatisfaction rates by 40% over 1 month center-wide</li>
-                <li>Assisted with fraud prevention projects in collaboration with the USPS</li>
-                <li>Assisted approximately 120 customers per day on various networks and platforms, totaling 20,000 lifetime contacts and a 96.5% satisfaction rate</li>
+                <li>Trained with Research Department on fraud prevention projects</li>
+                <li>Assisted approximately 120 customers per day on various devices, networks, and platforms, totaling 20,000 lifetime contacts and a 96.5% satisfaction rate</li>
                 </ul>
               </div>
             </div>
@@ -156,11 +169,11 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h3 className="font-semibold mb-2">Languages</h3>
-                <p className="text-gray-700">Python, VBA, XML, TypeScript, HTML<br></br>English, Spanish, ASL</p>
+                <p className="text-gray-700">Python, VBA, XML, TypeScript, JavaScript<br></br>English, Spanish, ASL</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Frontend</h3>
-                <p className="text-gray-700">React, Next.js, Tailwind CSS, Streamlit, Jupyter</p>
+                <p className="text-gray-700">HTML, React, Next.js, Tailwind CSS, Streamlit, Jupyter</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Backend</h3>
@@ -194,6 +207,14 @@ export default function Home() {
                            target="_blank"
                            rel="noopener noreferrer">
                           <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.pdf && (
+                        <a href={project.pdf}
+                           className="text-gray-600 hover:text-gray-900"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                          <FileText className="w-5 h-5" />
                         </a>
                       )}
                     </div>
