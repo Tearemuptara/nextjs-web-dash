@@ -70,6 +70,7 @@ export default function Home() {
             alt="A professional in a white collared shirt with brown hair, sitting in front of NASA's flags."
             width={200} // width in pixels
             height={0} // height in pixels
+            priority
             className="shadow-lg rounded-lg"
           />
           </div>
