@@ -95,7 +95,7 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-center mb-6 px-4">
+        <div className="flex justify-center mb-6">
           <nav className="flex space-x-2">
             {['about', 'experience', 'skills', 'projects'].map((tab) => (
               <button
