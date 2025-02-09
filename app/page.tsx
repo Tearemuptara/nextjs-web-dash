@@ -134,7 +134,7 @@ export default function Home() {
 
           {activeTab === 'experience' && (
             <div>
-                <div className="flex justify-end z-50">
+                <div className="flex justify-end">
                   <ResumeDropdown />
                 </div>
               <div className="space-y-4">

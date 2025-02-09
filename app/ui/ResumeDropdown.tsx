@@ -31,7 +31,7 @@ export default function ResumeDropdown() {
     }, []);
 
     return (
-        <div className="absolute z-10 inline-block text-left" ref={dropdownRef}>
+        <div className="inline-block text-left" ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center px-7 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
@@ -42,7 +42,7 @@ export default function ResumeDropdown() {
             </button>
 
             {isOpen && (
-                <div className="absolute-right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+                <div className="absolute z-10 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200">
                     {resumeOptions.map((option) => (
                         <a
                             key={option.label}
