@@ -17,6 +17,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'This website',
+    description: 'Built a Next.js (React) website to host online portfolio of engineering work.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Web Development'],
+    github: 'https://github.com/Tearemuptara/nextjs-web-dash'
+  },
+  {
     title: 'Langchain & Streamlit Chatbot',
     description: 'Built a chatbot with Ollama, Langchain and Streamlit',
     technologies: ['Python', 'Web Apps', 'LangChain', 'Streamlit', 'LLMs'],
@@ -118,8 +124,10 @@ export default function Home() {
           {activeTab === 'about' && (
             <div>
               <p className="text-gray-700 leading-relaxed">
-                I'm a versatile engineer with 3 years of experience of embedded software development experience and almost 7 years of research & development experience at NASA. 
-                Prior to college, I had a thriving career at giants like Netflix and AT&T. I'm passionate about solving complex problems through elegant solutions and automation.
+                I'm a versatile engineer with 3 years of professional embedded software development experience in the automotive industry and over 3 years of technical internships and project experience with NASA. 
+                Prior to college, I built my career in massive enterprise environments: spearheading AT&T's fiber-optic rollout across Michigan and supporting Netflix's evolution from DVDs into a global streaming giant. 
+                This early exposure to large-scale operations and progressive responsibility continued through my work at NASA, where I compressed a 16-week project into a single day and took on 4x the typical intern workload across multiple departments. 
+                At Daimler, I managed software requirements and documentation for embedded systems, oversaw database architecture, and coordinated with global development teams across four continents.
               </p>
             </div>
           )}
@@ -181,7 +189,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Tools</h3>
-                <p className="text-gray-700">Git, Docker, GCP, AWS, CI/CD, Solidworks</p>
+                <p className="text-gray-700">Git, Docker, GCP, AWS, 3D CAD, CI/CD</p>
               </div>
             </div>
           )}
