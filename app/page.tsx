@@ -109,8 +109,8 @@ export default function Home() {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-lg ${activeTab === tab
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-600 hover:text-gray-900'
+                  ? 'bg-gray-900 text-white'
+                  : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -134,9 +134,9 @@ export default function Home() {
 
           {activeTab === 'experience' && (
             <div>
-                <div className="flex justify-end">
-                  <ResumeDropdown />
-                </div>
+              <div className="flex justify-center mb-2">
+                <ResumeDropdown />
+              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Embedded Software Engineer II</h3>
