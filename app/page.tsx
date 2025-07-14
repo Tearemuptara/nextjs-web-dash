@@ -3,7 +3,7 @@
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useState } from 'react'
-import { Github, Linkedin, Mail, ExternalLink, FileText } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, FileText, Calendar } from 'lucide-react'
 import Image from 'next/image';
 import ResumeDropdown from './ui/ResumeDropdown';
 
@@ -98,6 +98,17 @@ export default function Home() {
               className="text-gray-600 hover:text-gray-900">
               <Mail className="w-6 h-6" />
             </a>
+          </div>
+          
+          {/* Book Appointment Button */}
+          <div className="flex justify-center mb-6">
+            <Link 
+              href="/book"
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 transition-colors"
+            >
+              <Calendar className="w-5 h-5" />
+              <span>Book an appointment</span>
+            </Link>
           </div>
         </div>
 
