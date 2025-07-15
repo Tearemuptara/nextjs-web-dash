@@ -179,9 +179,9 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-gray-900">Technical Support Representative</h3>
                   <p className="text-gray-600">Netflix • 2011 - 2014</p>
                   <ul className="mt-2 list-disc list-inside text-gray-700">
-                    <li>Ranked in the top 10 of 1,000 employees according to rigorous performance metrics</li>
+                    <li>Ranked in the top 10 of 1,000 technical support employees according to rigorous performance metrics</li>
                     <li>Presented a training that cut dissatisfaction rates by 40% over 1 month center-wide</li>
-                    <li>Trained with Research Department on fraud prevention projects</li>
+                    <li>Trained alongside the Netflix Research Department on fraud prevention projects</li>
                     <li>Assisted approximately 120 customers per day on various devices, networks, and platforms, totaling 20,000 lifetime contacts and a 96.5% satisfaction rate</li>
                   </ul>
                 </div>
