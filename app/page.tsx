@@ -73,8 +73,8 @@ export default function Home() {
             Aerospace Systems Engineer
           </p>
           <div className="flex justify-center items-center mb-4">
-            <Image src="/project_files/Prevo_Headshot.JPG"
-              alt="A professional in a white collared shirt with brown hair, sitting in front of the US NASA's flags."
+            <Image src="/project_files/mountain-theme.png"
+              alt="Minimalist illustration of a snow-capped mountain peak with evergreen forests and a winding dirt path in the foreground."
               width={200} // width in pixels
               height={0} // height in pixels
               priority
