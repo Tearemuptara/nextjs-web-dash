@@ -1,4 +1,5 @@
 import './ui/global.css'
+import { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({
@@ -12,4 +13,22 @@ export default function RootLayout({
       <body>{children}<Analytics /></body>
     </html>
   );
+}
+
+export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'robots': 'noai, noimageai',
+  },
 }
