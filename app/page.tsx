@@ -70,7 +70,9 @@ export default function Home() {
             T. M. Prevo
           </h1>
           <p className="text-xl text-gray-600 mb-3">
-            Aerospace Systems Engineer
+            Explorer. Bootstrapper. Engineer.
+            <br />
+            <i>If we can dream it, we can build it.</i>
           </p>
           <div className="flex justify-center items-center mb-4">
             <Image src="/project_files/mountain-theme.png"
@@ -135,10 +137,7 @@ export default function Home() {
           {activeTab === 'about' && (
             <div>
               <p className="text-gray-700 leading-relaxed">
-                I'm a versatile engineer with 3 years of professional embedded software development experience in the automotive industry and over 3 years of technical internships and project experience with NASA.
-                Prior to college, I built my career in massive enterprise environments: spearheading AT&T's fiber-optic rollout across Michigan and supporting Netflix's evolution from DVDs-by-mail into a global streaming giant.
-                This early exposure to large-scale operations and progressive responsibility continued through my work at NASA, where I compressed a 16-week project into a single day and took on 4x the typical intern workload across multiple departments.
-                At Daimler, I managed software requirements and documentation for embedded software on the Central Gateway, integrated with database architecture across 11 networks, and coordinated with global development teams across four continents.
+              I'm a bootstrapper from Flint, Michigan: I grew up around engines and grit, left for Oregon with nothing but my truck, and put myself through mechanical engineering school while chronically homeless, earning cum laude honors with both hands tied behind my back. I've worked in massive enterprise operations at AT&T, Netflix, Daimler Truck, and NASA, in progressively responsible roles from sales to customer service to safety-critical component engineering. At NASA, I compressed a 16-week project into a single day and took on 4x the typical workload across multiple departments. At Daimler, I managed embedded software for the Central Gateway on Freightliner trucks, coordinated with global dev teams across four continents, oversaw production of 500+ vehicles daily, and reduced daily Custom Work Orders by 80% through automation and root cause analysis. With 20 years of hands-on mechatronics experience, I've been building cars, websites, software, and bootstrapping complex solutions for decades. Need a hand? I'm your man.
               </p>
             </div>
           )}
