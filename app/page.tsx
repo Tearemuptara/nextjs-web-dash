@@ -149,12 +149,22 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Independent Builder & Consultant</h3>
+                  <p className="text-gray-600">Self-Employed • 2024 - Present</p>
+                  <ul className="mt-2 list-disc list-inside text-gray-700">
+                    <li>Managed complex FHA 203k renovation: roofing, plumbing, electrical, structural re-support, and interior design—completed 3 months early and $16k under budget</li>
+                    <li>Built wheelchair ramps for disabled community members</li>
+                    <li>Advised brother's Michigan startup to profitability within year 1</li>
+                    <li>Developed containerized applications, launched websites, and built chatbots</li>
+                  </ul>
+                </div>
+                <div>
                   <h3 className="text-lg font-semibold text-gray-900">Embedded Software Engineer II</h3>
                   <p className="text-gray-600">Daimler Truck • 2021 - 2024</p>
                   <ul className="mt-2 list-disc list-inside text-gray-700">
                     <li>Led development of Central Gateway ECU in custom semi-trucks</li>
                     <li>Reduced Custom Work Orders by 80%</li>
-                    <li>Mentored junior engineers globally</li>
+                    <li>Trained offshore teams for 1.5 years before role was outsourced</li>
                   </ul>
                 </div>
                 <div>
@@ -181,7 +191,6 @@ export default function Home() {
                     <li>Ranked in the top 10 of 1,000 technical support employees according to rigorous performance metrics</li>
                     <li>Presented a training that cut dissatisfaction rates by 40% over 1 month center-wide</li>
                     <li>Trained alongside the Netflix Research Department on fraud prevention projects</li>
-                    <li>Assisted approximately 120 customers per day on various devices, networks, and platforms, totaling 20,000 lifetime contacts and a 96.5% satisfaction rate</li>
                   </ul>
                 </div>
               </div>
@@ -189,22 +198,54 @@ export default function Home() {
           )}
 
           {activeTab === 'skills' && (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-6">
               <div>
-                <h3 className="font-semibold mb-2">Languages</h3>
-                <p className="text-gray-700">Python, VBA, XML, TypeScript, JavaScript<br></br>English, Spanish, ASL</p>
+                <h3 className="font-semibold mb-2">What I Actually Do</h3>
+                <p className="text-gray-700">
+                  Jump into broken systems, diagnose root causes, and ship working solutions under vague requirements and tight deadlines. I'm a technical generalist—more software mechanic than software engineer. If it's on the side of the road, I can get it running again.
+                </p>
               </div>
-              <div>
-                <h3 className="font-semibold mb-2">Frontend</h3>
-                <p className="text-gray-700">HTML, React, Next.js, Tailwind CSS, Streamlit, Jupyter</p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Backend</h3>
-                <p className="text-gray-700">Node.js, PostgreSQL, Neo4J, MATLab</p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Tools</h3>
-                <p className="text-gray-700">Git, Docker, GCP, AWS, 3D CAD, CI/CD</p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold mb-2">Core Strengths</h3>
+                  <p className="text-gray-700">
+                    Rapid system diagnosis<br/>
+                    Cross-functional coordination<br/>
+                    Legacy system integration<br/>
+                    0-to-1 problem solving<br/>
+                    Working with ambiguity
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Technical Range</h3>
+                  <p className="text-gray-700">
+                    Embedded systems (4 years automotive)<br/>
+                    Full-stack development<br/>
+                    Database architecture & migration<br/>
+                    Enterprise systems (COBOL to cloud)<br/>
+                    Mechanical systems & diagnostics
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Languages & Tools</h3>
+                  <p className="text-gray-700">
+                    Python, TypeScript, SQL, VBA, XML<br/>
+                    React, Next.js, Docker, GCP, AWS<br/>
+                    CAD, Vector CANalyzer, Git<br/>
+                    English, Spanish, ASL
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Domain Experience</h3>
+                  <p className="text-gray-700">
+                    Aerospace testing & analysis<br/>
+                    Automotive embedded software<br/>
+                    Enterprise operations (AT&T, Netflix)<br/>
+                    Manufacturing systems<br/>
+                    Technical documentation
+                  </p>
+                </div>
               </div>
             </div>
           )}
